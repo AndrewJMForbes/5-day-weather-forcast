@@ -38,8 +38,8 @@ function handleSearch() {
       response.json())
     .then((data) => { 
       if (data && Array.isArray(data) && data.length >= 1){
-
-      getForecast(data[0]) 
+      getForecast(data[0])
+      return(data) 
       } else {
         alert('no city found')
       }
